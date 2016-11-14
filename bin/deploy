@@ -1,0 +1,52 @@
+#!/usr/bin/env node
+require('shelljs/global');
+
+exec('mv public public.bak');
+exec('mkdir public');
+exec('mkdir public/css');
+exec('cp css/main.css public/css');
+exec('cp -R img public/');
+exec('cp *.html public/');
+exec('cp robots.txt public/');
+exec('rm -r ./public.bak');
+
+var prompt = require('prompt');
+var server = "root@looprecur.com";
+var schema = {
+  properties: {
+    answer: {
+      description: "Are you sure? [y|yes]",
+      pattern: /^[a-zA-Z]*$/
+    }
+  }
+};
+
+prompt.start();
+prompt.get(schema, function (err, result) {
+  if(!result) {return;}
+
+  var a = result.answer;
+  if(err) {
+    console.log(err.message);
+    return;
+  }
+
+  if(a == 'Y' || a == 'y' || a == 'yes' || a == 'YES') {
+    exec('tar -zcvf public.tar.gz public/');
+    console.log('Sending public.tar.gz');
+    exec('scp public.tar.gz '+server+':/usr/share/nginx/rg_deploys');
+    exec('rm public.tar.gz');
+    exec('scp bin/deploy_server '+server+':/usr/share/nginx/rg_bin/');
+    console.log('Finishing deploy on '+server);
+    var proc = exec('ssh '+server+' /usr/share/nginx/rg_bin/deploy_server', {async: true});
+
+    proc.stdout.on('data', function(data){
+      if(data.match(/YOU GOT THAT FRESH RGREENWAY YO/)){
+        setTimeout(function(){process.exit()}, 2000);
+      }
+    });
+  }
+});
+
+
+

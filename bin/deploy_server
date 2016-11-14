@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+ts=$(date "+%Y.%m.%d-%H.%M.%S")
+
+cd /usr/share/nginx/rg_deploys
+tar -xzvf public.tar.gz
+mkdir /usr/share/nginx/rg_deploys/$ts
+
+mv /usr/share/nginx/rg_deploys/public /usr/share/nginx/rg_deploys/$ts/public
+cd /usr/share/nginx/rgreenway
+ln -sfn /usr/share/nginx/rg_deploys/$ts/public current
+cd /usr/share/nginx/rg_deploys
+rm public.tar.gz
+echo "YOU GOT THAT FRESH RGREENWAY YO"
+

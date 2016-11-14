@@ -1,0 +1,23 @@
+{
+  "name": "rgreenwayweb",
+  "version": "0.0.1",
+  "description": "rgreenway",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loop-recur/rgreenwayweb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/loop-recur/rgreenwayweb/issues"
+  },
+  "homepage": "https://github.com/loop-recur/rgreenwayweb#readme",
+  "devDependencies": {
+    "prompt": "^1.0.0",
+    "shelljs": "^0.7.5"
+  }
+}
