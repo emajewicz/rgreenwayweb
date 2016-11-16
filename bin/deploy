@@ -7,7 +7,6 @@ exec('mkdir public/css');
 exec('cp css/main.css public/css');
 exec('cp -R img public/');
 exec('cp *.html public/');
-exec('cp robots.txt public/');
 exec('rm -r ./public.bak');
 
 var prompt = require('prompt');
