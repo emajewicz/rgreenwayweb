@@ -148,14 +148,14 @@ strong {
 }
 
 header {
-display: flex;
-justify-content: flex-start;
-align-items: center;
-color: $green;
-font-weight: 500;
-padding: 0 2.5%;
-width: 100%;
-font-family: $sans;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: $green;
+  font-weight: 500;
+  padding: 0 2.5%;
+  width: 100%;
+  font-family: $sans;
 }
 
 .RGreenways-logo {
@@ -264,6 +264,7 @@ main {
     transform: scale(1) rotate(0deg)
   }
 }
+
 .grain:after {
   content: '';
   width: 110%;
@@ -276,6 +277,7 @@ main {
   left: -5%;
   display: block
 }
+
 @keyframes grain {
   0%, 100% {
     transform: translate(0, 0, 0)
@@ -324,7 +326,7 @@ main {
    flex-direction: row;
   }
 
-  @media #{$lg} {
+  @media #{$md} {
    padding: em(100) 20% em(25) 20%;
   }
 
@@ -398,27 +400,6 @@ main {
 
     p {
       text-align: justify;
-    }
-
-    @media #{$md} {
-     order: 2;
-
-      p {
-        -webkit-column-count: 2; /* Chrome, Safari, Opera */
-        -moz-column-count: 2; /* Firefox */
-        column-count: 2;
-        -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
-        -moz-column-gap: 40px; /* Firefox */
-        column-gap: 40px;
-      }
-    }
-
-    @media #{$lg} {
-      p {
-      -webkit-column-count: 1; /* Chrome, Safari, Opera */
-      -moz-column-count: 1; /* Firefox */
-      column-count: 1;
-      }
     }
   }
 }

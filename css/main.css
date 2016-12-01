@@ -2762,7 +2762,7 @@ main {
     .intro {
       padding-top: 3.125em;
       flex-direction: row; } }
-  @media (min-width: 1200px) {
+  @media (min-width: 992px) {
     .intro {
       padding: 6.25em 20% 1.5625em 20%; } }
   .intro .l-left-col, .intro .l-right-col {
@@ -2820,27 +2820,6 @@ main {
     flex-grow: 2; }
     .intro .l-right-col p {
       text-align: justify; }
-    @media (min-width: 992px) {
-      .intro .l-right-col {
-        order: 2; }
-        .intro .l-right-col p {
-          -webkit-column-count: 2;
-          /* Chrome, Safari, Opera */
-          -moz-column-count: 2;
-          /* Firefox */
-          column-count: 2;
-          -webkit-column-gap: 40px;
-          /* Chrome, Safari, Opera */
-          -moz-column-gap: 40px;
-          /* Firefox */
-          column-gap: 40px; } }
-    @media (min-width: 1200px) {
-      .intro .l-right-col p {
-        -webkit-column-count: 1;
-        /* Chrome, Safari, Opera */
-        -moz-column-count: 1;
-        /* Firefox */
-        column-count: 1; } }
 
 .features {
   background: url(../img/RGreenways-in-hand.jpg);
