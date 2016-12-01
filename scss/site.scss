@@ -1,0 +1,498 @@
+// * {
+//   outline: 1px solid red;
+// }
+
+// BASE STYLES
+// -----------------------------------|
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+$font-size: 14;         // Your base font-size in pixels
+$em: $font-size*1em;    // Shorthand for outputting ems, e.g. "em(12)"
+$rem: $font-size*1rem;  // Shorthand for outputting ems, e.g. "12$rem"
+
+$browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Holtwood+One+SC|Lora:400,400i,700');
+
+$serif: "Lora", Georgia, Times, "Times New Roman", serif;
+
+body {
+  max-width: 1920px;
+  margin: 0 auto 0 auto;
+  height: 100vh;
+
+  position: relative;
+
+  font-family: $serif;
+  color: #000;
+  background-color: #fff;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-backface-visibility: hidden;
+  font-size: 14px;
+  line-height: 1.5em;
+
+  @media #{$md} {
+    font-size: 15px;
+  }
+
+  @media #{$lg} {
+    font-size: 16px;
+  }
+
+  @media #{$xl} {
+    font-size: 18px;
+  }
+}
+
+// UTILITIES
+// -----------------------------------|
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.list-reset {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.hidden {
+  visibility: hidden;
+  position: absolute;
+}
+
+button {
+  cursor: pointer;
+
+  &:focus, &:active {
+    outline: none;
+  }
+}
+
+
+// TEXT
+// -----------------------------------|
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: em(20)
+}
+
+h2 {
+  font-size: em(20)
+}
+
+a h1, a h2 {
+  color: #444;
+}
+
+a {
+  color: darken($green, 10%);
+  @include transition(color);
+  text-decoration: none;
+
+  &:hover, &:focus {
+    color: darken($green, 15%);
+    text-decoration: none;
+  }
+}
+
+p {
+  font-family: $serif;
+  line-height: em(28);
+}
+
+i, .italic {
+  font-style: italic;
+}
+
+strong {
+  font-weight: 700;
+}
+
+#wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  position: relative;
+  padding: 20px 10%;
+}
+
+header {
+display: flex;
+justify-content: flex-start;
+align-items: center;
+color: $green;
+font-weight: 500;
+padding: 0 2.5%;
+width: 100%;
+font-family: $sans;
+}
+
+.RGreenways-logo {
+  width: 43px;
+  height: auto;
+  margin-right: em(5);
+  position: relative;
+  z-index: 1;
+}
+
+main {
+  width: 100%;
+}
+
+.banner {
+  width: 100%;
+  height: 30vw;
+  position: relative;
+
+  &.main-banner {
+    background-size: cover;
+    margin-top: -10px;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-bottom: 5vw;
+    padding-left: 5%;
+  }
+
+  .main-banner-text {
+    color: #fff;
+    font-size: 3vw;
+    position: relative;
+    z-index: 999;
+    font-family: 'Holtwood One SC', serif;
+    text-shadow: 0 2px 3px rgba(0,0,0,.85);
+
+    @media #{$xl} {
+     font-size: em(45);
+    }
+  }
+
+  .iphone {
+    position: absolute;
+    bottom: 95%;
+    left: 60%;
+    width: 20%
+  }
+
+  .iphone-inner {
+    position: relative;
+
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: auto;
+
+      &.banner-iphone {
+        height: auto;
+        box-shadow: 0 8px 18px 0 rgba(0,0,0,0.06);
+        border-radius: 2.5vw;
+      }
+
+      &.iphone-screen {
+        margin-top: 25%;
+        left: 7%;
+        width: 86.55%;
+      }
+    }
+  }
+}
+
+.banner-bg {
+  width: 100%;
+  height: 30vw;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.slide-bg {
+  -webkit-animation: kenburns 120s infinite linear;
+  animation: kenburns 120s infinite linear;
+  background-image: url(../img/banner-image-no-phone.jpg);
+  width: 100%;
+  height: 30vw;
+  background-color: #000;
+  background-size: cover;
+}
+
+@keyframes kenburns {
+  0% {
+    transform: scale(1) rotate(0deg)
+  }
+  50% {
+    transform: scale(1.4)
+  }
+  100% {
+    transform: scale(1) rotate(0deg)
+  }
+}
+.grain:after {
+  content: '';
+  width: 110%;
+  height: 110%;
+  background: url(../img/bg_grain.png) repeat center center;
+  -webkit-animation: grain .5s 0s steps(1) infinite;
+  animation: grain .5s 0s steps(1) infinite;
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  display: block
+}
+@keyframes grain {
+  0%, 100% {
+    transform: translate(0, 0, 0)
+  }
+  10% {
+    transform: translate(-1%, -1%)
+  }
+  20% {
+    transform: translate(1%, 1%)
+  }
+  30% {
+    transform: translate(-2%, -2%)
+  }
+  40% {
+    transform: translate(3%, 3%)
+  }
+  50% {
+    transform: translate(-3%, -3%)
+  }
+  60% {
+    transform: translate(4%, 4%)
+  }
+  70% {
+    transform: translate(-4%, -4%)
+  }
+  80% {
+    transform: translate(2%, 2%)
+  }
+  90% {
+    transform: translate(-2%, -2%)
+  }
+}
+
+.l-no-padding {
+  padding: 0 !important;
+}
+
+.intro {
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+  padding: em(25) 0 em(25) 0;
+
+  @media #{$sm} {
+   padding-top: em(50);
+   flex-direction: row;
+  }
+
+  @media #{$lg} {
+   padding: em(100) 20% em(25) 20%;
+  }
+
+  .l-left-col, .l-right-col {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: inline;
+
+    @media #{$sm} {
+     flex-grow: 1;
+     padding: 0;
+     order: 1;
+    }
+
+    img {
+      height: auto;
+    }
+  }
+
+  .l-left-col {
+    min-width: em(200);
+
+    @media #{$sm} {
+      margin-right: 40px;
+    }
+
+    .buy-links {
+      background: #FFFFFF;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      margin-top: em(15);
+      align-items: center;
+      flex-direction: column;
+
+      @media #{$sm} {
+        max-width: em(300);
+      }
+    }
+
+    .btn-buy-link {
+      height: auto;
+      margin: 10px 0;
+      padding: 0;
+      overflow: visible;
+      width: 70%;
+
+      @media #{$sm} {
+       width: 100%;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        border-radius: 6px;
+        @include transition();
+
+        &:hover {
+          opacity: 0.90;
+          box-shadow: 0 4px 10px rgba(#000, 0.1);
+        }
+      }
+    }
+  }
+
+  .l-right-col {
+    justify-content: flex-start;
+    flex-grow: 2;
+
+    p {
+      text-align: justify;
+    }
+
+    @media #{$md} {
+     order: 2;
+
+      p {
+        -webkit-column-count: 2; /* Chrome, Safari, Opera */
+        -moz-column-count: 2; /* Firefox */
+        column-count: 2;
+        -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+        -moz-column-gap: 40px; /* Firefox */
+        column-gap: 40px;
+      }
+    }
+
+    @media #{$lg} {
+      p {
+      -webkit-column-count: 1; /* Chrome, Safari, Opera */
+      -moz-column-count: 1; /* Firefox */
+      column-count: 1;
+      }
+    }
+  }
+}
+
+.features {
+  background: url(../img/RGreenways-in-hand.jpg);
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  margin: 0 auto;
+  min-height: em(500);
+  padding: em(20);
+
+  @media #{$md} {
+   width: 60%;
+   background-position: left top;
+  }
+
+  .overlay {
+    width: em(300);
+    background-color: rgba(255,255,255,0.7);
+    box-shadow: 0 1em 2em -1em rgba(0,0,0,.5);
+    padding: em(20);
+  }
+}
+
+.have-ideas {
+
+  @media #{$sm} {
+   width: 60%;
+   margin: em(50) auto;
+  }
+}
+
+.bg-divider {
+  background-image: url(../img/banner-image.jpg);
+  background-size: cover;
+  height: 4px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: em(20) 0;
+  margin: 0 auto;
+  color: $green;
+  font-family: $sans;
+
+  .RGreenways-logo-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dev-logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      max-width: 45%;
+
+      img {
+        width: 100%;
+        @include transition();
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}

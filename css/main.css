@@ -5,6 +5,7 @@
  *
  * Copyright (c) 2016 Daniel Eden
  */
+@import url("https://fonts.googleapis.com/css?family=Holtwood+One+SC|Lora:400,400i,700");
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -2525,7 +2526,7 @@ body {
   margin: 0 auto 0 auto;
   height: 100vh;
   position: relative;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Lora", Georgia, Times, "Times New Roman", serif;
   color: #000;
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
@@ -2583,7 +2584,7 @@ a h1, a h2 {
   color: #444; }
 
 a {
-  color: #009d9c;
+  color: #25a25a;
   -webkit-transition: color 0.2s ease-in-out;
   -moz-transition: color 0.2s ease-in-out;
   -ms-transition: color 0.2s ease-in-out;
@@ -2591,17 +2592,18 @@ a {
   transition: color 0.2s ease-in-out;
   text-decoration: none; }
   a:hover, a:focus {
-    color: #006a69;
+    color: #208e4e;
     text-decoration: none; }
 
 p {
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
+  font-family: "Lora", Georgia, Times, "Times New Roman", serif;
+  line-height: 1.75em; }
 
 i, .italic {
   font-style: italic; }
 
 strong {
-  font-weight: 500; }
+  font-weight: 700; }
 
 #wrapper {
   display: flex;
@@ -2620,7 +2622,8 @@ header {
   color: #2ecc71;
   font-weight: 500;
   padding: 0 2.5%;
-  width: 100%; }
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
 
 .RGreenways-logo {
   width: 43px;
@@ -2634,9 +2637,9 @@ main {
 
 .banner {
   width: 100%;
-  height: 35vw; }
+  height: 30vw;
+  position: relative; }
   .banner.main-banner {
-    background-image: url(../img/banner-image.jpg);
     background-size: cover;
     margin-top: -10px;
     position: relative;
@@ -2645,104 +2648,222 @@ main {
     justify-content: flex-end;
     align-items: flex-start;
     flex-direction: column;
-    padding-bottom: 10vw;
+    padding-bottom: 5vw;
     padding-left: 5%; }
   .banner .main-banner-text {
     color: #fff;
-    font-size: 5vw; }
+    font-size: 3vw;
+    position: relative;
+    z-index: 999;
+    font-family: 'Holtwood One SC', serif;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.85); }
+    @media (min-width: 1560px) {
+      .banner .main-banner-text {
+        font-size: 2.8125em; } }
+  .banner .iphone {
+    position: absolute;
+    bottom: 95%;
+    left: 60%;
+    width: 20%; }
+  .banner .iphone-inner {
+    position: relative; }
+    .banner .iphone-inner img {
+      position: absolute;
+      width: 100%;
+      height: auto; }
+      .banner .iphone-inner img.banner-iphone {
+        height: auto;
+        box-shadow: 0 8px 18px 0 rgba(0, 0, 0, 0.06);
+        border-radius: 2.5vw; }
+      .banner .iphone-inner img.iphone-screen {
+        margin-top: 25%;
+        left: 7%;
+        width: 86.55%; }
 
+.banner-bg {
+  width: 100%;
+  height: 30vw;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+.slide-bg {
+  -webkit-animation: kenburns 120s infinite linear;
+  animation: kenburns 120s infinite linear;
+  background-image: url(../img/banner-image-no-phone.jpg);
+  width: 100%;
+  height: 30vw;
+  background-color: #000;
+  background-size: cover; }
+
+@keyframes kenburns {
+  0% {
+    transform: scale(1) rotate(0deg); }
+
+  50% {
+    transform: scale(1.4); }
+
+  100% {
+    transform: scale(1) rotate(0deg); } }
+.grain:after {
+  content: '';
+  width: 110%;
+  height: 110%;
+  background: url(../img/bg_grain.png) repeat center center;
+  -webkit-animation: grain 0.5s 0s steps(1) infinite;
+  animation: grain 0.5s 0s steps(1) infinite;
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  display: block; }
+
+@keyframes grain {
+  0%, 100% {
+    transform: translate(0, 0, 0); }
+
+  10% {
+    transform: translate(-1%, -1%); }
+
+  20% {
+    transform: translate(1%, 1%); }
+
+  30% {
+    transform: translate(-2%, -2%); }
+
+  40% {
+    transform: translate(3%, 3%); }
+
+  50% {
+    transform: translate(-3%, -3%); }
+
+  60% {
+    transform: translate(4%, 4%); }
+
+  70% {
+    transform: translate(-4%, -4%); }
+
+  80% {
+    transform: translate(2%, 2%); }
+
+  90% {
+    transform: translate(-2%, -2%); } }
 .l-no-padding {
   padding: 0 !important; }
 
-.l-one-col {
+.intro {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding: 3.125em 0; }
-  .l-one-col .l-single-col {
-    width: 90%;
-    padding: 0 2.5%; }
-
-.l-two-col {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 3.125em 0; }
-  .l-two-col .l-left-col, .l-two-col .l-right-col {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; }
-    @media (min-width: 650px) {
-      .l-two-col .l-left-col, .l-two-col .l-right-col {
-        width: 45%;
-        padding: 0 2.5%; } }
-    .l-two-col .l-left-col img, .l-two-col .l-right-col img {
-      max-width: 100%;
-      height: auto; }
-  .l-two-col .l-right-col {
-    justify-content: flex-start; }
-
-.l-three-col {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 3.125em 0; }
-  .l-three-col .l-left-col, .l-three-col .l-center-col, .l-three-col .l-right-col {
-    width: 25%;
-    margin: 0 2.5%;
-    position: relative; }
-    .l-three-col .l-left-col img, .l-three-col .l-center-col img, .l-three-col .l-right-col img {
-      max-width: 100%; }
-
-.buy-links {
-  background: #FFFFFF;
-  border: 1px solid #A5A5A5;
-  border: 1px solid #A5A5A5;
-  box-shadow: 0 10px 18px 0 rgba(0, 0, 0, 0.07);
-  border-radius: 8px;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; }
+  flex-direction: column-reverse;
+  padding: 1.5625em 0 1.5625em 0; }
   @media (min-width: 650px) {
-    .buy-links {
-      max-width: 18.75em; } }
+    .intro {
+      padding-top: 3.125em;
+      flex-direction: row; } }
+  @media (min-width: 1200px) {
+    .intro {
+      padding: 6.25em 20% 1.5625em 20%; } }
+  .intro .l-left-col, .intro .l-right-col {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: inline; }
+    @media (min-width: 650px) {
+      .intro .l-left-col, .intro .l-right-col {
+        flex-grow: 1;
+        padding: 0;
+        order: 1; } }
+    .intro .l-left-col img, .intro .l-right-col img {
+      height: auto; }
+  .intro .l-left-col {
+    min-width: 12.5em; }
+    @media (min-width: 650px) {
+      .intro .l-left-col {
+        margin-right: 40px; } }
+    .intro .l-left-col .buy-links {
+      background: #FFFFFF;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      margin-top: 0.9375em;
+      align-items: center;
+      flex-direction: column; }
+      @media (min-width: 650px) {
+        .intro .l-left-col .buy-links {
+          max-width: 18.75em; } }
+    .intro .l-left-col .btn-buy-link {
+      height: auto;
+      margin: 10px 0;
+      padding: 0;
+      overflow: visible;
+      width: 70%; }
+      @media (min-width: 650px) {
+        .intro .l-left-col .btn-buy-link {
+          width: 100%; } }
+      .intro .l-left-col .btn-buy-link img {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        border-radius: 6px;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out; }
+        .intro .l-left-col .btn-buy-link img:hover {
+          opacity: 0.90;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); }
+  .intro .l-right-col {
+    justify-content: flex-start;
+    flex-grow: 2; }
+    .intro .l-right-col p {
+      text-align: justify; }
+    @media (min-width: 992px) {
+      .intro .l-right-col {
+        order: 2; }
+        .intro .l-right-col p {
+          -webkit-column-count: 2;
+          /* Chrome, Safari, Opera */
+          -moz-column-count: 2;
+          /* Firefox */
+          column-count: 2;
+          -webkit-column-gap: 40px;
+          /* Chrome, Safari, Opera */
+          -moz-column-gap: 40px;
+          /* Firefox */
+          column-gap: 40px; } }
+    @media (min-width: 1200px) {
+      .intro .l-right-col p {
+        -webkit-column-count: 1;
+        /* Chrome, Safari, Opera */
+        -moz-column-count: 1;
+        /* Firefox */
+        column-count: 1; } }
 
-.btn-buy-link {
-  height: auto;
-  margin: 10px 0;
-  padding: 0;
-  overflow: visible;
-  width: 80%; }
-  .btn-buy-link img {
-    width: 100%;
-    height: auto;
-    margin: 0;
-    border-radius: 6px;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -ms-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out; }
-    .btn-buy-link img:hover {
-      opacity: 0.90;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); }
+.features {
+  background: url(../img/RGreenways-in-hand.jpg);
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 31.25em;
+  padding: 1.25em; }
+  @media (min-width: 992px) {
+    .features {
+      width: 60%;
+      background-position: left top; } }
+  .features .overlay {
+    width: 18.75em;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 1em 2em -1em rgba(0, 0, 0, 0.5);
+    padding: 1.25em; }
 
-.path-name {
-  position: absolute;
-  bottom: 5px;
-  right: 5px;
-  font-weight: 500;
-  color: #fff; }
+@media (min-width: 650px) {
+  .have-ideas {
+    width: 60%;
+    margin: 3.125em auto; } }
 
 .bg-divider {
   background-image: url(../img/banner-image.jpg);
@@ -2755,10 +2876,11 @@ footer {
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 90%;
+  width: 100%;
+  padding: 1.25em 0;
   margin: 0 auto;
   color: #2ecc71;
-  font-weight: bold; }
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
   footer .RGreenways-logo-wrap {
     display: flex;
     justify-content: center;
@@ -2766,6 +2888,15 @@ footer {
   footer .dev-logos {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end; }
-    footer .dev-logos img {
+    align-items: center; }
+    footer .dev-logos a {
       max-width: 45%; }
+      footer .dev-logos a img {
+        width: 100%;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out; }
+        footer .dev-logos a img:hover {
+          opacity: 0.7; }

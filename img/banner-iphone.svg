@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="181px" height="368px" viewBox="0 0 181 368" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>banner-iphone-2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="77" y="21" width="30" height="4" rx="2"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="30" height="4" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <path d="M181,104.802729 L181,340.008169 C181,354.365247 169.358593,366 154.998191,366 L29.0018094,366 C14.6447238,366 3,354.363061 3,340.008169 L3,25.9918307 C3,11.6347532 14.6414066,0 29.0018094,0 L154.998191,0 C169.355276,0 181,11.636939 181,25.9918307 L181,78.1989577 C180.757097,78.380404 180.599976,78.6690064 180.599976,78.9929654 L180.599976,104.007035 C180.599976,104.332645 180.756453,104.621649 181,104.802729 Z M16.0008474,43 C14.8958099,43 14,43.899089 14,45.000054 L14,318.999946 C14,320.104545 14.8966222,321 16.0008474,321 L167.999153,321 C169.10419,321 170,320.100911 170,318.999946 L170,45.000054 C170,43.8954547 169.103378,43 167.999153,43 L16.0008474,43 Z" id="path-3"></path>
+        <rect id="path-4" x="8" y="4" width="169" height="357" rx="22"></rect>
+        <mask id="mask-5" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="169" height="357" fill="white">
+            <use xlink:href="#path-4"></use>
+        </mask>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="169" height="357" fill="white">
+            <use xlink:href="#path-4"></use>
+        </mask>
+    </defs>
+    <g id="Main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="13-inch-Retina-Macbook-Pro" transform="translate(-722.000000, -158.000000)" stroke="#A5A5A5">
+            <g id="Header-Image" transform="translate(92.000000, 61.000000)">
+                <g id="banner-image" transform="translate(0.000000, 29.000000)">
+                    <g id="banner-iphone-2" transform="translate(629.000000, 69.000000)">
+                        <circle id="Oval-6" cx="64" cy="23" r="3"></circle>
+                        <use id="Rectangle-7" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+                        <g id="Combined-Shape">
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                            <use xlink:href="#path-3"></use>
+                        </g>
+                        <g id="Rectangle-6" stroke-width="2">
+                            <use mask="url(#mask-5)" xlink:href="#path-4"></use>
+                            <use mask="url(#mask-6)" xlink:href="#path-4"></use>
+                        </g>
+                        <path d="M1.99822533,78.4954226 L1.99822538,106" id="Line" stroke-linecap="square"></path>
+                        <path d="M2.5,46.4411765 L2.5,60.5588235" id="Line" stroke-linecap="square"></path>
+                        <path d="M1.99777581,111.01 L1.99777581,138.916665" id="Line" stroke-linecap="square"></path>
+                        <circle id="Oval-5" cx="92" cy="11" r="2"></circle>
+                        <circle id="Oval-7" cx="92" cy="342" r="12"></circle>
+                        <circle id="Oval-8" cx="92" cy="342" r="14"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

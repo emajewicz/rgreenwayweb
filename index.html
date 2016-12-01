@@ -20,16 +20,25 @@
 
 <body>
   <div id="wrapper">
+
     <header>
       <img src="img/RGreenways-logo.png" class="RGreenways-logo" alt="" /> RGreenways
     </header>
 
     <main>
+
       <div class="banner main-banner">
-        <h1 class="main-banner-text">Choose Your Path.</h1>
+        <div class="banner-bg"><div class="slide-bg grain"></div></div>
+        <h1 class="main-banner-text wow fadeIn" data-wow-duration="5s">Choose Your Path.</h1>
+        <div class="iphone">
+          <div class="iphone-inner">
+            <img src="img/banner-iphone-screen.jpg" class="iphone-screen" alt="">
+            <img src="img/banner-iphone.svg" class="banner-iphone" alt="">
+          </div>
+        </div>
       </div>
 
-      <div class="l-two-col">
+      <div class="intro">
         <div class="l-left-col">
           <div class="buy-links">
             <a href="https://itunes.apple.com/us/app/rgreenway/id549618578?mt=8" class="btn btn-buy-link btn-buy-link-applestore"><img src="img/appstore.svg" alt="" /></a>
@@ -38,38 +47,22 @@
         </div>
         <div class="intro-text l-right-col">
           <p>
-            RGreenways is your outdoor guide to the miles and miles of public greenways available in the greater RDU area. We've sourced data from multiple towns so you can access greenway data across multiple municipalities. In addition, we're always adding parking, water, and restroom locations to make your greenway experience even better. Hope to see you out on the trails! 
-          </p>
+            RGreenways is the outdoor guide that's miles ahead of traditional trail maps. Navigate the many public greenways available in the greater Raleigh-Durham area with ease! Combining data from multiple towns, RGreenways puts the entire system at your fingertips. Parking, water, and restroom locations can be added to the maps to make your greenway experience even better. We'll see you out on the trails!
+          <br><br></p>
         </div>
       </div>
 
-      <div class="l-two-col">
-        <div class="l-left-col">
-          <p><strong>We’ll lead you on your way.</strong> RGreenways will help you locate trails near your current location, show parking, get directions, and track your hikes. Keep track of your favorite greenways by adding them to your favorites to always know how far you are from a relaxing walk or intense bike ride.</p>
-        </div>
-        <div class="l-right-col">
-          <img src="img/what-you-get.jpg" alt="" />
+      <div class="features">
+        <div class="overlay wow fadeIn">
+          <h2>We’ll lead you on your way.</h2>
+          <p> RGreenways will help you locate trails near your current location, show parking, get directions, and track your hikes. Keep track of your favorite greenways by adding them to your favorites to always know how far you are from a relaxing walk or intense bike ride.</p>
         </div>
       </div>
 
-      <div class="l-three-col l-no-padding">
-        <div class="l-left-col">
-          <img src="img/path-img-1.jpg" alt="" />
-          <div class="path-name"></div>
-        </div>
-        <div class="l-center-col">
-          <img src="img/path-img-2.jpg" alt="" />
-          <div class="path-name"></div>
-        </div>
-        <div class="l-right-col">
-          <img src="img/path-img-3.jpg" alt="" />
-          <div class="path-name"></div>
-        </div>
-      </div>
 
-      <div class="l-one-col">
+      <div class="have-ideas">
       <p>
-        Have ideas for features for RGreenways? Want to submit a picture of a greenway for the app? Find something wrong in the app? <a href="mailto: greenway@looprecur.com">Shoot us an email</a> with feedback and we'll do our best to integrate it into the app. This application was built by <a href="http://www.looprecur.com" target="_blank">loop/recur</a> and <a href="http://www.oakcityapps.com" target="_blank">Oak City Apps</a>. <a href="mailto: hello@looprecur.com">Get in touch</a> with us to learn how we can build software for you. 
+        Have ideas for features for RGreenways? Want to submit a picture of a greenway for the app? Find something wrong in the app? <a href="mailto: greenway@looprecur.com">Shoot us an email</a> with feedback and we'll do our best to integrate it into the app. This application was built by <a href="http://www.looprecur.com" target="_blank">loop/recur</a> and <a href="http://www.oakcityapps.com" target="_blank">Oak City Apps</a>. To learn about how we can build software for you, <a href="mailto: hello@looprecur.com">get in touch</a>!
       </p>
       </div>
 
@@ -78,14 +71,16 @@
 
     <footer>
       <div class="RGreenways-logo-wrap">
-        <img src="img/RGreenways-logo.png" class="RGreenways-logo" alt="" /> RGreenways</div>
+        <img src="img/RGreenways-logo.png" class="RGreenways-logo" alt="" /> <strong>RGreenways</strong>&nbsp;is proudly brought to you by:</div>
       <div class="dev-logos">
-        <img src="img/lr-logo.svg" alt="" /> &amp; <img src="img/oakcity-logo.jpg" alt="" />
+        <a href="http://looprec"><img src="img/lr-logo.svg" alt="" /></a> &amp; <a href="http://oakcityapps.com/"><img src="img/oakcity-logo.jpg" alt="" /></a>
       </div>
     </footer>
 
   </div>
 
+<script type="text/javascript" src="js/vendor/wow.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
