@@ -6,6 +6,7 @@ exec('mkdir public');
 exec('mkdir public/css');
 exec('cp css/main.css public/css');
 exec('cp -R img public/');
+exec('cp -R js public/');
 exec('cp *.html public/');
 exec('rm -r ./public.bak');
 
