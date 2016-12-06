@@ -2863,11 +2863,29 @@ footer {
   footer .RGreenways-logo-wrap {
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    flex-direction: row;
+    width: 100%; }
+    @media (min-width: 650px) {
+      footer .RGreenways-logo-wrap {
+        width: auto; } }
+  footer .proudly {
+    width: 100%;
+    text-align: center;
+    margin: 0.3125em 0; }
+    @media (min-width: 650px) {
+      footer .proudly {
+        width: auto;
+        margin: 0;
+        margin-right: auto; } }
   footer .dev-logos {
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    width: 100%; }
+    @media (min-width: 650px) {
+      footer .dev-logos {
+        width: auto; } }
     footer .dev-logos a {
       max-width: 45%; }
       footer .dev-logos a img {
